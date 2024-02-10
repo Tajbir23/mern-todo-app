@@ -40,7 +40,7 @@ router.put('/update/:id', async(req,res) => {
         const {id} = req.params;
         const {name,email,phone} = req.body;
 
-        const updateUser = await user.findByIdAndUpdate(id, {name, email, phone}, {new: true});
+        const updateUser = await user.findByIdAndUpdate(id, {name, email, phone}, {new: true, upset: true});
         res.json(updateUser)
         
     } catch (error) {

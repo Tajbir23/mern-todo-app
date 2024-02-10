@@ -63,6 +63,7 @@ function Form() {
             type="text"
             name="name"
             placeholder="Enter your name "
+            required
             onChange={(e) => setUser({ ...user, name: e.target.value })}
           />
           <input
@@ -70,12 +71,14 @@ function Form() {
             name="email"
             placeholder="Enter your email "
             onChange={(e) => setUser({ ...user, email: e.target.value })}
+            required
           />
           <input
             type="tel"
             name="phone"
             placeholder="Enter your phone"
             onChange={(e) => setUser({ ...user, phone: e.target.value })}
+            required
           />
           <button type="submit">Submit</button>
         </form>
